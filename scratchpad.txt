@@ -1,0 +1,10 @@
+requirejs path: http://localhost:9615/scripts/lib/require.js
+
+
+http://www.happycow.net/gmaps/proximityXML18t.php?lat=-43.37910133500263&lon=173.056640625&distance=15&9&V=checked&VR=checked&VF=checked&HR=checked
+
+http://www.happycow.net/gmaps/proximityXML18t.php?lat=-43.5321&lon=172.636&distance=15&6&V=checked&VR=checked&VF=checked&HR=checked
+
+<div class="awesome-marker-icon-red awesome-marker leaflet-clickable leaflet-zoom-animated" style="margin-left: -17px; margin-top: -42px; width: 35px; height: 45px; transform: translate3d(434px, 95px, 0px); z-index: 95;"></div>
+
+<div class="awesome-marker-icon-red awesome-marker leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -17px; margin-top: -42px; width: 35px; height: 45px; opacity: 1; transform: translate3d(815px, 345px, 0px); z-index: 345;"></div>

@@ -1,0 +1,82 @@
+/*Marker clusters*/
+.marker-cluster-pie g.arc{
+  fill-opacity: 0.5;
+}
+.marker-cluster-pie-label {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.marker {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-width: 2px;
+  border-radius:10px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-style: solid;
+  text-align: center;
+  font-size: 9px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.category-1 { /* Stores */
+  fill: #FF3; /* Yellow */
+  stroke: #D80;
+  background: #FF3;
+  border-color: #D80;
+}
+
+.category-2 { /* Vegetarian */
+  fill: #9DF; /* Blue */
+  stroke: #007;
+  background: #9DF;
+  border-color: #007;
+}
+
+.category-3 { /* Vegan */
+  fill: #BFB; /* Green */
+  stroke: #070;
+  background: #BFB;
+  border-color: #070;
+}
+
+.category-4 { /* Veg-Friendly */
+  fill: #F88; /* Red */
+  stroke: #800;
+  background: #F88;
+  border-color: #800;
+}
+
+.icon-2{
+  content: "Vgn";
+}
+.icon-3{
+  content: "Vge";
+}
+.icon-4{
+  content: "VF";
+}
+
+.ext-logo {
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.happy-cow-logo {
+  background-image: url("/resources/images/happy_cow@50x50.jpg");
+}
+
+.google-maps-logo {
+  background-image: url("/resources/images/google_maps@50x50.png");
+}
+
+.here-logo {
+  background-image: url("/resources/images/here@50x50.jpg");
+}
