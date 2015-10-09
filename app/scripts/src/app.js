@@ -1,28 +1,48 @@
 define(function (require) {
 
 	var L = require("leaflet"),
+		Locate = require("leaflet-locate"),
 		OutletMarkerLayer = require("src/outlets/outletMarkerLayer");
 
 	var map,
 		outletMarkerLayer;
 
 	function start() {
-		map = L.map("map").setView([51.505, -0.09], 13);
+		map = L.map("map").setView([51.505, -0.09], 15);
 
-		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}@2x.png?access_token={accessToken}', {
+			attributionControl: false,
 			maxZoom: 18,
 			id: "michaelfry2002.ciffh9mgk00klsxlxqg3hm7bz",
 			accessToken: "pk.eyJ1IjoibWljaGFlbGZyeTIwMDIiLCJhIjoiY2lmZmg5bW9tMDBrb3R0a25sY2hrczhqYyJ9.6gUxriXEPeyvWQbq7znCAg"
 		}).addTo(map);
 
-		map.locate({
-			setView: true
+		var locationControl = new Locate({
+			keepCurrentZoomLevel: true
 		});
 
-		map.on("contextmenu", onMapContextMenu);
+		locationControl.addTo(map);
+		locationControl.start();
+
+		map.on("locationfound", function () {
+			onMapContextMenu();
+		});
 
 		initialiseOutputMarkerLayer();
+	}
+
+	function onLocationFound(e) {
+		var radius = e.accuracy / 2,
+			myIcon = L.divIcon({
+				className: "marker category-gps",
+				iconSize: null
+			});
+
+		L.marker(e.latlng, { icon: myIcon }).addTo(map);
+
+		L.circle(e.latlng, radius).addTo(map);
+
+		onMapContextMenu();
 	}
 
 	function onMapContextMenu(e) {

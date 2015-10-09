@@ -11,12 +11,17 @@
 			"jquery": getLibraryScriptPath("jquery-2.1.4.min"),
 			"leaflet": getLibraryScriptPath("leaflet"),
 			"leaflet-awesomemarkers": getLibraryScriptPath("leaflet.awesome-markers"),
+			"leaflet-locate": getLibraryScriptPath("L.Control.Locate.min"),
 			"leaflet-markercluster": getLibraryScriptPath("leaflet.markercluster"),
 			"lodash": getLibraryScriptPath("lodash.compat-2.4.1")
 		},
 		shim: {
 			"leaflet": {
 				exports: "L"
+			},
+			"leaflet-locate": {
+				deps: ["leaflet"],
+				exports: "L.Control.Locate"
 			},
 			"leaflet-markercluster": {
 				deps: ["leaflet"],

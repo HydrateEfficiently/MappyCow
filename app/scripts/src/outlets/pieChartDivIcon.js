@@ -13,7 +13,7 @@ define(function (require) {
 			innerRadiusDelta: 10,
 			pieClass: 'cluster-pie',
 			pieLabelClass: 'marker-cluster-pie-label',
-			pathClassFunc: function(d){return "category-"+d.data.key;},
+			pathClassFunc: function (d) { return "category-" + d.data.key; },
 			pathTitleFunc: emptyStringFunc, 
 		},
 

@@ -23,6 +23,13 @@
   font-family: sans-serif;
 }
 
+.category-gps {
+  fill: #9DF; /* Blue */
+  stroke: #FFF;
+  background: #9DF;
+  border-color: #FFF;
+}
+
 .category-1 { /* Stores */
   fill: #FF3; /* Yellow */
   stroke: #D80;
@@ -31,10 +38,10 @@
 }
 
 .category-2 { /* Vegetarian */
-  fill: #9DF; /* Blue */
-  stroke: #007;
-  background: #9DF;
-  border-color: #007;
+  fill: #C390D4; /* Purple */
+  stroke: #8D42A6;
+  background: #C390D4;
+  border-color: #8D42A6;
 }
 
 .category-3 { /* Vegan */
